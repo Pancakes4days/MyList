@@ -18,14 +18,14 @@ const app = () => {
       
       <Text style={styles.title}>Grocery List</Text>
       <Link href="/groceries" style={{ marginHorizontal: 'auto'}} asChild>
-          <Pressable style={styles.button}>
-            <Text style={styles.buttonText}>Start Here!</Text>
+          <Pressable style={styles.topButtonStyle}>
+            <Text style={styles.buttonText}>Start</Text>
           </Pressable>
         </Link>
 
         <Link href="/calendar" style={{ marginHorizontal: 'auto'}} asChild>
           <Pressable style={styles.button}>
-            <Text style={styles.buttonText}>Our Menu</Text>
+            <Text style={styles.bottomButtonText}>Start Planning</Text>
           </Pressable>
         </Link>
 
@@ -43,6 +43,8 @@ const styles = StyleSheet.create({
 
     flex: 1,
     flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   image: {
     width: '100%',
@@ -58,7 +60,7 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     textAlign: 'center',
     backgroundColor: 'rgba(9, 50, 31, 0.18)',
-    marginBottom: 400,
+    marginBottom: 100,
     padding: 50,
   },
 
@@ -87,7 +89,23 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
     textAlign: 'center',
-  }
+  },
 
+  bottomButtonText: {
+    color: 'white',
+    fontSize: 15,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  
+  topButtonStyle: {
+    height: 45,
+    width: 80,
+    borderRadius: 20,
+    justifyContent: 'center',
+    backgroundColor: 'rgb(0,0,0)',
+    padding: 10,
+    marginBottom: 20,
+  }
 })
 
